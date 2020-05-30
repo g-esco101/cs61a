@@ -27,7 +27,9 @@ def roll_dice(num_rolls, dice=six_sided):
 
 
 def free_bacon(score):
-    """Return the points scored from rolling 0 dice (Free Bacon).
+    """Return the points scored from rolling 0 dice (Free Bacon):
+    make every other digit in the opponent's score negative, then add all
+    the digits, and finally add one. 
 
     score:  The opponent's current score.
     """
@@ -68,7 +70,9 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
 
 def is_swap(player_score, opponent_score):
     """
-    Return whether the two scores should be swapped
+    Return whether the two scores should be swapped: calculate three to the power of the sum of
+    the player_score and the opponent_score, after points for the turn are added to 
+    the current player's score. If the first digit and last digit are the same, the scores should be swapped.
     """
     # BEGIN PROBLEM 4
     excitement = [int(x) for x in str(3**(player_score + opponent_score))]
