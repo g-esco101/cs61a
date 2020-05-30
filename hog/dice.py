@@ -49,6 +49,11 @@ def make_test_dice(*outcomes):
     index = len(outcomes) - 1
     def dice():
         nonlocal index
+#        print("DEBUG:", f'$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$') 
+#        print("DEBUG:", f'index: {index}. ') 
         index = (index + 1) % len(outcomes)
+#        print("DEBUG:", f'index: {index}. ') 
+#        print("DEBUG:", f'outcomes: {outcomes}. ')
+#        print("DEBUG:", f'outcomes[index]: {outcomes[index]}. ')  
         return outcomes[index]
     return dice

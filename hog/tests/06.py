@@ -80,16 +80,15 @@ test = {
           ...     print(s0, s1)
           ...     return total
           >>> s0, s1 = play(always_roll(1), always_roll(1), dice=make_test_dice(2, 3), goal=15, say=echo)
-          a851cef97171f3eb929be7094e9a3432
-          26f5762c932a578994ea1c8fc7fa6c02
-          072a7e5a36da4da6069d77fa89868297
-          b5f748b949729bc0225f547dce8206af
-          353cf22d8dfbbd2fc3b5586221b0ffca
-          6790f7070fa643e868f99363486b6275
-          # locked
+          0 2
+          5
+          2 5
+          13
+          4 11
+          21
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -112,14 +111,13 @@ test = {
           ...     print('**', s1)
           ...     return echo_1
           >>> s0, s1 = play(always_roll(1), always_roll(1), dice=make_test_dice(2), goal=3, say=both(echo_0, echo_1))
-          c1e26c2383bba0314a3621133a7d28ff
-          e4010b4a7d51e81cc1f49e08b015b8eb
-          c1e26c2383bba0314a3621133a7d28ff
-          cad0f4cdee6d8af26abb184d977c50fd
-          # locked
+          * 0
+          ** 2
+          * 0
+          ** 4
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
